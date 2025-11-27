@@ -1,0 +1,45 @@
+@use "./styles/placeholders";
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  padding: 0 24px;
+  @extend %flex-container;
+
+  nav ul {
+    @extend %flex-container;
+
+    li {
+      list-style: none;
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+main {
+  section {
+    @extend %section-container;
+
+    &#first {
+      background-color: orangered;
+    }
+
+    &#second {
+      background-color: green;
+    }
+
+    &#third {
+      background-color: brown;
+    }
+  }
+}
